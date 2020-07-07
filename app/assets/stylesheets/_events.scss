@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+.Header {
+  width: 100vw;
+  height: 60px;
+  background-color: rgb(255, 184, 118);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__title {
+    padding-left: 30px;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  } &__nav-list {
+    padding: 10px;
+  }
+}
