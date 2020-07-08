@@ -20,7 +20,7 @@
     justify-content: space-between;
     margin-right: 20px;
   } &__nav-list {
-    padding: 30px;
+    padding: 20px;
     font-weight: bold;
   }
 }
@@ -98,6 +98,29 @@
         .event-member {
           margin-top: 3px;
         }
+      }
+    }
+  }
+}
+
+.Eventbox {
+  background-color: chocolate;
+  width: 80%;
+  height: 800px;
+  margin: 0px 100px;
+  &__Info {
+    width: 80%;
+    background-color: cornflowerblue;
+    height: 100%;
+    margin: 0px 100px;
+    .heading {
+      background-color: crimson;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &__content {
+        padding-right: 30px;
       }
     }
   }
