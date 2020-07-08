@@ -19,3 +19,66 @@
     padding: 10px;
   }
 }
+.Main-Contents {
+  width: 100vw;
+  height: calc(100vh - 60px);
+  .Contents-box {
+    height: 100%;
+    width: 80%;
+    background-color: green;
+    margin: 0px 100px 0px;
+    .Contents-header {
+      height: 100px;
+      width: 800px;
+      margin-left: 10px;
+      background-color: rgb(105, 104, 102);
+    } .EventInfo {
+      color: white;
+      padding: 8px 0px 0px 3px;
+      &__date {
+        background-color: blue;
+        height: 30px;
+        margin-top: 20px;
+      }
+    }
+    .Eventlist {
+      width: 50%;
+      height: 250px;
+      background-color: red;
+      margin: 20px 0px 0px 10px;
+      display: flex;
+      align-items: center;
+      &__left {
+        height: 150px;
+        width: 20%;
+        padding: 10px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .datetime {
+
+        }
+      }
+      &__right {
+        background-color: orange;
+        height: 150px;
+        width: 80%;
+        .event-owner {
+          height: 30px;
+          padding: 5px;
+          border-bottom: 1px solid black;
+          &__name {
+            font-weight: bold;
+          }
+        }
+        .event-image {
+          margin-top: 10px;
+          height: 100px;
+          width: 30%;
+          background-color: orchid;
+        }
+      }
+    }
+  }
+}
