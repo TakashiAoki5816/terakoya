@@ -10,10 +10,11 @@
   %body
     .Header
       .Header__title
-        Terakoya
+        = link_to root_path do
+          Terakoya
       .Header__nav
         .Header__nav-list
-          %a{ href: '#' }
+          = link_to new_event_path do
             勉強会作成
         .Header__nav-list
           %a{ href: '#' }

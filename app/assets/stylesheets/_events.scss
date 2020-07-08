@@ -123,5 +123,39 @@
         padding-right: 30px;
       }
     }
+    .event-block {
+      background-color: darkgoldenrod;
+      height: 80px;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      &__label {
+
+      }
+      &__title {
+
+      }
+    }
+    .event-image {
+      height: 100px;
+      margin-top: 10px;
+      background-color: darkgrey;
+    }
+    .event-description {
+      height: 300px;
+      background-color: darkolivegreen;
+    }
+    .event-submit {
+      height: 100px;
+      background-color: darkslategrey;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &__btn {
+        height: 30px;
+        width: 70px;
+      }
+    }
   }
 }
