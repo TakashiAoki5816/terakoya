@@ -5,26 +5,31 @@
   width: 100vw;
   height: 60px;
   background-color: rgb(255, 184, 118);
+  border-bottom: 1px solid gray;
   display: flex;
   align-items: center;
   justify-content: space-between;
   &__title {
-    padding-left: 30px;
+    padding-left: 50px;
+    font-size: 20px;
+    font-weight: bold;
   }
   &__nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-right: 20px;
   } &__nav-list {
-    padding: 10px;
+    padding: 30px;
+    font-weight: bold;
   }
 }
 .Main-Contents {
   width: 100vw;
-  height: calc(100vh - 60px);
+  height: 2000px;
   .Contents-box {
     height: 100%;
-    width: 80%;
+    width: 90%;
     background-color: green;
     margin: 0px 100px 0px;
     .Contents-header {
@@ -42,14 +47,14 @@
       }
     }
     .Eventlist {
-      width: 50%;
-      height: 250px;
+      width: 70%;
+      height: 280px;
       background-color: red;
       margin: 20px 0px 0px 10px;
       display: flex;
       align-items: center;
       &__left {
-        height: 150px;
+        height: 200px;
         width: 20%;
         padding: 10px;
         background-color: white;
@@ -62,21 +67,36 @@
       }
       &__right {
         background-color: orange;
-        height: 150px;
+        height: 200px;
         width: 80%;
         .event-owner {
           height: 30px;
           padding: 5px;
           border-bottom: 1px solid black;
+          display: flex;
+          justify-content: space-between;
           &__name {
             font-weight: bold;
           }
+          &__created-date {
+
+          }
         }
-        .event-image {
+        .event-content {
+          display: flex;
           margin-top: 10px;
-          height: 100px;
-          width: 30%;
-          background-color: orchid;
+          &__image {
+            height: 130px;
+            width: 25%;
+            background-color: orchid;
+          }
+          &__title {
+            width: 75%;
+            background-color: brown;
+          }
+        }
+        .event-member {
+          margin-top: 3px;
         }
       }
     }
