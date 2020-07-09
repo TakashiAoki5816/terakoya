@@ -7,8 +7,8 @@
 |password|string|null: false|
 
 ### Association
-- has_many: user_events
-- has_many: events through: user_events
+- has_many :user_events
+- has_many :events through: user_events
 
 ## eventsテーブル
 
@@ -21,8 +21,8 @@
 |tag|string|
 
 ### Association
-- has_many: event_users
-- has_many: users throuch: event_users
+- has_many :event_users
+- has_many :users throuch: event_users
 
 ## event_usersテーブル
 |Column|Type|Options|
@@ -31,5 +31,5 @@
 |event_id|foreign_key|null: false, foreign_key: true|
 
 ### Association
-- belongs_to: user_id
-- belongs_to: event_id
+- belongs_to :user_id
+- belongs_to :event_id
