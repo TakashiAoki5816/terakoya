@@ -10,18 +10,15 @@
   %body
     .Header
       .Header__title
-        = link_to root_path do
-          Terakoya
+        = link_to "Terakoya", root_path
       .Header__nav
         .Header__nav-list
-          = link_to new_event_path do
-            勉強会作成
+          = link_to "勉強会作成", new_event_path
         .Header__nav-list
           %a{ href: '#' }
             参加一覧
         .Header__nav-list
-          %a{ href: '#' }
-            ログアウト
+          = link_to current_user.name, edit_user_path(current_user)
     %p.notice
       = notice
     %p.alert
