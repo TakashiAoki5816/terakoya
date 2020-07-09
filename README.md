@@ -21,10 +21,10 @@
 |tag|string|
 
 ### Association
-- has_many: user_events
-- has_many: users throuch: user_events
+- has_many: event_users
+- has_many: users throuch: event_users
 
-## user_eventsテーブル
+## event_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|foreign_key|null: false, foreign_key: true|
