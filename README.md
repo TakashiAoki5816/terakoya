@@ -8,7 +8,7 @@
 
 ### Association
 - has_many :user_events
-- has_many :events through: user_events
+- has_many :events, through: :event_users
 
 ## eventsテーブル
 
@@ -22,7 +22,7 @@
 
 ### Association
 - has_many :event_users
-- has_many :users throuch: event_users
+- has_many :users, throuch: :event_users
 
 ## event_usersテーブル
 |Column|Type|Options|
