@@ -105,15 +105,16 @@
       background-color: darkgoldenrod;
       height: 80px;
       margin-top: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
       &__label {
 
       }
       &__title {
 
       }
+    }
+    .event-datetime {
+      height: 100px;
+      background-color: gold;
     }
     .event-image {
       height: 100px;
