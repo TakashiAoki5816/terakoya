@@ -14,7 +14,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|title|string|null: false|
 |datetime|time|null: false|
 |image|string|
 |content|text|
