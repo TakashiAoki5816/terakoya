@@ -15,6 +15,10 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
+|datetime|time|null: false|
+|image|string|
+|content|text|
+|tag|string|
 
 ### Association
 - has_many: user_events
