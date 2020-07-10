@@ -2,10 +2,22 @@
   .Eventbox
     .Eventbox__Info
       = form_with model: @event, locale: true do |f|
-        .form-group
-          = f.label :title
-          = f.text_field :title, class: 'form-control'
+        %h2.Eventbox-heading 勉強会を作成
+        .form-group.col-md-8
+          = f.label :title, 'タイトル'
+          = f.text_field :title, class: 'form-control', placeholder: '例： Rails勉強会'
+        .form-group.col-md-8
+          = f.label :datetime, '日時'
+          = f.datetime_local_field :datetime, class: 'form-control'
         .form-group.col-md-6
-          = f.label :article
-          = f.text_area :article, class: 'form-control'
-          = f.submit '新規登録', class: 'btn btn-primary'
+          = f.label :image, "イメージ画像"
+          = f.file_field :image, class: 'form-control'
+        .form-group.col-md-8
+          = f.label :content, "勉強会の内容"
+          = f.text_area :content, class: 'form-control'
+        .form-group.col-md-6
+          = f.label :tag, "言語"
+          = f.text_field :tag, size: 10*20 ,class: 'form-control'
+        .form-group.col-md-6
+          = f.submit '勉強会を作成', class: 'btn btn-primary'
+

@@ -20,8 +20,5 @@
             参加一覧
         .Header__nav-list
           = link_to current_user.name, edit_user_path(current_user)
-    %p.notice
-      = notice
-    %p.alert
-      = alert
+    = render 'layouts/notifications'
     = yield
