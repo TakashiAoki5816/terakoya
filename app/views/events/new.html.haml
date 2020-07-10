@@ -1,18 +1,11 @@
 .wrapper
   .Eventbox
     .Eventbox__Info
-      .heading
-        %h2.heading__content 勉強会作成
-      .event-block
-        .event-block__label
-          勉強会タイトル*
-        .event-block__title
-          %input
-      .event-datetime
-        日付：10月20日
-      .event-image
-        勉強会イメージ画像
-      .event-description
-        %textarea イベント説明
-      .event-submit
-        %input{type: 'submit', class: 'event-submit__btn' }
+      = form_with model: @event, locale: true do |f|
+        .form-group
+          = f.label :title
+          = f.text_field :title, class: 'form-control'
+        .form-group.col-md-6
+          = f.label :article
+          = f.text_area :article, class: 'form-control'
+          = f.submit '新規登録', class: 'btn btn-primary'
