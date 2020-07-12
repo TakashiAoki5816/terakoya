@@ -7,9 +7,9 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.create(event_params)
+    @event = Event.new(event_params)
     if @event.save
-      redirect_to root_path(current_user), notice: '勉強会が作成されました'
+      redirect_to root_path, notice: '勉強会が作成されました'
     else
       flash.now[:alert] = '必須項目を入力してください。'
       render :new
@@ -18,6 +18,6 @@ class EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit(:title, :datetime, :image, :content, :tag)
+    params.require(:event).permit(:title, :datetime, :image, :content, :tag, user_ids: [])
   end
 end
