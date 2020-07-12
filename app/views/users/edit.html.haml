@@ -17,5 +17,5 @@
             = f.email_field :email, autofocus: true, autocomplete: "email"
         = f.submit "Update", class: "update-btn"
       .Formbtn-field
-        = link_to "ログアウト", class: "form-btn"
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "form-btn"
         = link_to "トップページへ戻る", class: "form-btn"
