@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+.Main-Contents {
+  width: 100vw;
+  height: 200vh;
+  background-color: #EEEEEE;
+  .Contents-box {
+    height: 100%;
+    width: 90%;
+    background-color: white;
+    margin: 0px 100px 0px;
+    .Contents-header {
+      height: 80px;
+      width: 800px;
+      margin-left: 10px;
+      background-color: gray;
+    } .EventInfo {
+      color: #EEEEEE;
+      padding: 8px 0px 0px 3px;
+      &__date {
+        background-color: #BBBBBB;
+        height: 30px;
+        margin-top: 20px;
+        padding: 2px;
+        font-weight: bold;
+        color: white;
+      }
+    }
+    .Eventlist {
+      width: 90%;
+      height: 280px;
+      border: 1px solid gray;
+      margin: 20px 0px 0px 10px;
+      display: flex;
+      align-items: center;
+      &__left {
+        height: 200px;
+        width: 20%;
+        padding: 10px;
+        border: 1px solid gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .datetime {
+
+        }
+      }
+      &__right {
+        border: 1px solid gray;
+        height: 200px;
+        width: 80%;
+        .event-owner {
+          height: 30px;
+          padding: 5px;
+          border-bottom: 1px solid black;
+          display: flex;
+          justify-content: space-between;
+          &__name {
+            font-weight: bold;
+          }
+          &__created-date {
+
+          }
+        }
+        .event-content {
+          display: flex;
+          margin-top: 10px;
+          &__image {
+            height: 130px;
+            width: 25%;
+            border: 1px solid gray;
+          }
+          &__title {
+            width: 75%;
+            border: 1px solid gray;
+          }
+        }
+        .event-member {
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+}
+.wrapper {
+  height: 1000px;
+  background-color: #eeeeee;
+  .Eventbox {
+    background-color: #FFFFEE;
+    width: 80%;
+    height: 800px;
+    margin: 0px 100px;
+    &__Info {
+      width: 80%;
+      height: 100%;
+      margin: 0px 100px;
+      .Eventbox-heading {
+        padding: 20px 0px 0px 20px;
+        margin-bottom: 30px;
+      }
+      .form-group {
+        margin-bottom: 2rem;
+      }
+      #event_content {
+        height: 150px;
+      }
+    }
+  }
+}
