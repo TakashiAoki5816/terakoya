@@ -84,25 +84,28 @@
     }
   }
 }
-
-.Eventbox {
-  background-color: #FFFFEE;
-  width: 80%;
-  height: 800px;
-  margin: 0px 100px;
-  &__Info {
+.wrapper {
+  height: 1000px;
+  background-color: #eeeeee;
+  .Eventbox {
+    background-color: #FFFFEE;
     width: 80%;
-    height: 100%;
+    height: 800px;
     margin: 0px 100px;
-    .Eventbox-heading {
-      padding: 20px 0px 0px 20px;
-      margin-bottom: 30px;
-    }
-    .form-group {
-      margin-bottom: 2rem;
-    }
-    #event_content {
-      height: 150px;
+    &__Info {
+      width: 80%;
+      height: 100%;
+      margin: 0px 100px;
+      .Eventbox-heading {
+        padding: 20px 0px 0px 20px;
+        margin-bottom: 30px;
+      }
+      .form-group {
+        margin-bottom: 2rem;
+      }
+      #event_content {
+        height: 150px;
+      }
     }
   }
 }

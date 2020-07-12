@@ -1,11 +1,10 @@
 .AccountPage {
   width: 100vw;
   height: calc(100vh - 60px);
-  margin-top: 30px;
+  background-color: #EEEEEE;
   .AccountBox {
     width: 80%;
     height: 100%;
-    background-color: deeppink;
     margin: 0px 100px;
     text-align: center;
     &__title {
@@ -15,12 +14,10 @@
       width: 100%;
       height: 500px;
       margin-top: 20px;
-      background-color: deepskyblue;
       .Form-field {
         height: 100px;
         margin-bottom: 10px;
         &__label--normal {
-          background-color: dimgray;
           margin-bottom: 5px;
           label {
             font-size: 20px;

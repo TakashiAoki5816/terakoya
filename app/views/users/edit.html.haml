@@ -1,6 +1,6 @@
 .AccountPage
   .AccountBox
-    %h2.AccountBox__title User Edit
+    %h2.AccountBox__title ユーザー編集
     = form_for(current_user) do |f|
       .AccountContent
         .Form-field
@@ -16,5 +16,6 @@
           .Form-field__input--normal
             = f.email_field :email, autofocus: true, autocomplete: "email"
         = f.submit "Update", class: "update-btn"
-      = link_to "ログアウト"
-      = link_to "トップページへ戻る"
+      .Formbtn-field
+        = link_to "ログアウト", class: "form-btn"
+        = link_to "トップページへ戻る", class: "form-btn"
