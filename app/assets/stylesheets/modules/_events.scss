@@ -44,7 +44,14 @@
         align-items: center;
         justify-content: center;
         .datetime {
-
+          font-weight: bold;
+          &__date {
+            font-size: 20px;
+            padding-bottom: 35px;
+          }
+          &__time {
+            font-size: 30px;
+          }
         }
       }
       &__right {
@@ -57,11 +64,13 @@
           border-bottom: 1px solid black;
           display: flex;
           justify-content: space-between;
-          &__name {
-            font-weight: bold;
+          .eventowner {
+            display: flex;
+            &__name {
+              font-weight: bold;
+            }
           }
           &__created-date {
-
           }
         }
         .event-content {
@@ -74,7 +83,10 @@
           }
           &__title {
             width: 75%;
+            padding: 20px;
             border: 1px solid gray;
+            font-size: 30px;
+            font-weight: bold;
           }
         }
         .event-member {
