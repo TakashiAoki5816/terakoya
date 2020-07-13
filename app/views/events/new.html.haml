@@ -4,6 +4,9 @@
       = form_with model: @event, locale: true do |f|
         %h2.Eventbox-heading 勉強会を作成
         .form-group.col-md-8
+          = f.label :name, '主催者'
+          = f.text_field :name, class: 'form-control'
+        .form-group.col-md-8
           = f.label :title, 'タイトル'
           = f.text_field :title, class: 'form-control', placeholder: '例： Rails勉強会'
         .form-group.col-md-8

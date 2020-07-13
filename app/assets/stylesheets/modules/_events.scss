@@ -90,7 +90,7 @@
   .Eventbox {
     background-color: #FFFFEE;
     width: 80%;
-    height: 800px;
+    height: 1000px;
     margin: 0px 100px;
     &__Info {
       width: 80%;
@@ -99,6 +99,9 @@
       .Eventbox-heading {
         padding: 20px 0px 0px 20px;
         margin-bottom: 30px;
+      }
+      form {
+        border: 1px solid gray;
       }
       .form-group {
         margin-bottom: 2rem;
