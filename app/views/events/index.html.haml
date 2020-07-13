@@ -6,57 +6,22 @@
           新着イベント
         .EventInfo__date
           7月7日
-      .Eventlist
-        .Eventlist__left
-          .datetime
-            日時：10:00
-        .Eventlist__right
-          .event-owner
-            .event-owner__name
-              作成者：Takashi
-            .event-owner__created-date
-              公開日：10月20日
-          .event-content
-            .event-content__image
-              img
-            .event-content__title
-              Rails勉強会
-          .event-member
-            参加者：BEN
-      .Eventlist
-        .Eventlist__left
-          .datetime
-            日時：10:00
-        .Eventlist__right
-          .event-owner
-            .event-owner__name
-              ユーザー名：Takashi
-            .event-owner__created-date
-              公開日：10月20日
-          .event-content
-            .event-content__image
-              img
-            .event-content__title
-              Rails勉強会
-          .event-member
-            参加者：BEN
-      .Eventlist
-        .Eventlist__left
-          .datetime
-            日時：10:00
-        .Eventlist__right
-          .event-owner
-            .event-owner__name
-              ユーザー名：Takashi
-            .event-owner__created-date
-              公開日：10月20日
-          .event-content
-            .event-content__image
-              img
-            .event-content__title
-              Rails勉強会
-          .event-member
-            参加者：BEN
-
-
-
+      .Eventlists
+        - @events.each do |event|
+          .Eventlist
+            .Eventlist__left
+              .datetime
+                = event.datetime.strftime("%Y年%m月%d日%H:%M")
+            .Eventlist__right
+              .event-owner
+                .event-owner__name
+                  Takashi
+                .event-owner__created-date
+                  = "#{"公開日:" + event.created_at.strftime("%m月%d日")}"
+              .event-content
+                .event-content__image
+                  = event.image
+                .event-content__title
+                  = event.content
+              .event-member
+                参加者：BEN
