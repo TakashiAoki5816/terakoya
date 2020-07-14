@@ -4,15 +4,16 @@
 
 .Main-Contents {
   width: 100vw;
-  height: 200vh;
+  height: 300vh;
   background-color: #EEEEEE;
   .Contents-box {
     height: 100%;
     width: 90%;
     background-color: white;
     margin: 0px 100px 0px;
+    padding-top: 8px;
     .Contents-header {
-      height: 80px;
+      height: 50px;
       width: 800px;
       margin-left: 10px;
       background-color: gray;
@@ -21,7 +22,7 @@
       padding: 8px 0px 0px 3px;
       &__date {
         background-color: #BBBBBB;
-        height: 30px;
+        height: 10px;
         margin-top: 20px;
         padding: 2px;
         font-weight: bold;
@@ -87,6 +88,10 @@
             border: 1px solid gray;
             font-size: 30px;
             font-weight: bold;
+            a {
+              color: black;
+              text-decoration: none;
+            }
           }
         }
         .event-member {
@@ -121,6 +126,64 @@
       #event_content {
         height: 150px;
       }
+    }
+  }
+}
+
+.Event-Info {
+  height: 1000px;
+  background-color: white;
+  margin: 0px 100px;
+  &__header {
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .imagebox {
+      width: 60%;
+      height: 80%;
+      padding: 20px;
+    }
+    .Eventjoin-box {
+      height: 90%;
+      width: 30%;
+      border: 1px solid gray;
+      margin: 20px;
+      padding: 30px;
+      &__date {
+        font-size: 30px;
+      }
+      &__form {
+        margin-top: 50px;
+        font-size: 20px;
+      }
+    }
+  }
+  &__titlebox {
+    height: 100px;
+    width: 60%;
+    margin: 20px;
+    border: 1px solid gray;
+    .title-info {
+      font-weight: bold;
+    }
+    .title {
+      font-size: 30px;
+      font-weight: bold;
+      padding-top: 5px;
+      text-align: center;
+    }
+  }
+  &__contentbox {
+    height: 40%;
+    margin: 20px;
+    border: 1px solid gray;
+    .content-Info {
+      font-weight: bold;
+    }
+    .content {
+      padding: 20px;
+      font-size: 25px;
     }
   }
 }
