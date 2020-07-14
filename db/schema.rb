@@ -12,15 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2020_07_14_131301) do
 
-  create_table "event_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "event_id"
-    t.bigint "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["event_id"], name: "index_event_users_on_event_id"
-    t.index ["user_id"], name: "index_event_users_on_user_id"
-  end
-
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.datetime "datetime", null: false
@@ -34,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_07_14_131301) do
 
   create_table "tickets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
-    t.bigint "event_id", null: false
+    t.bigint "event_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["event_id"], name: "index_tickets_on_event_id"
@@ -56,6 +47,6 @@ ActiveRecord::Schema.define(version: 2020_07_14_131301) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "event_users", "events"
-  add_foreign_key "event_users", "users"
+  add_foreign_key "tickets", "events"
+  add_foreign_key "tickets", "users"
 end
