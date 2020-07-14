@@ -3,60 +3,34 @@
     .Contents-box
       .Contents-header
         .EventInfo
-          新着イベント
+          近日開催の勉強会
         .EventInfo__date
-          7月7日
-      .Eventlist
-        .Eventlist__left
-          .datetime
-            日時：10:00
-        .Eventlist__right
-          .event-owner
-            .event-owner__name
-              作成者：Takashi
-            .event-owner__created-date
-              公開日：10月20日
-          .event-content
-            .event-content__image
-              img
-            .event-content__title
-              Rails勉強会
-          .event-member
-            参加者：BEN
-      .Eventlist
-        .Eventlist__left
-          .datetime
-            日時：10:00
-        .Eventlist__right
-          .event-owner
-            .event-owner__name
-              ユーザー名：Takashi
-            .event-owner__created-date
-              公開日：10月20日
-          .event-content
-            .event-content__image
-              img
-            .event-content__title
-              Rails勉強会
-          .event-member
-            参加者：BEN
-      .Eventlist
-        .Eventlist__left
-          .datetime
-            日時：10:00
-        .Eventlist__right
-          .event-owner
-            .event-owner__name
-              ユーザー名：Takashi
-            .event-owner__created-date
-              公開日：10月20日
-          .event-content
-            .event-content__image
-              img
-            .event-content__title
-              Rails勉強会
-          .event-member
-            参加者：BEN
-
-
-
+      .Eventlists
+        - @events.each do |event|
+          .Eventlist
+            .Eventlist__left
+              .datetime
+                .datetime__date
+                  = event.datetime.strftime("%m月%d日")
+                .datetime__time
+                  = event.datetime.strftime("%H:%M")
+            .Eventlist__right
+              .event-owner
+                .eventowner
+                  .eventowner__title
+                    主催者：
+                  .eventowner__name
+                    = event.name
+                .eventowner
+                  .eventowner__created-title
+                    公開日：
+                  .eventowner__created-date
+                    = event.created_at.strftime("%m月%d日")
+              .event-content
+                .event-content__image
+                  - if event.image?
+                    = image_tag event.image.url
+                .event-content__title
+                  = event.title
+              .event-member
+                参加者：BEN
