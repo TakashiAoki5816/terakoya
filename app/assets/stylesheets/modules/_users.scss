@@ -1,11 +1,10 @@
 .AccountPage {
   width: 100vw;
   height: calc(100vh - 60px);
-  background-color: #EEEEEE;
   .AccountBox {
     width: 80%;
     height: 100%;
-    margin: 0px 100px;
+    margin: 30px 100px;
     text-align: center;
     &__title {
       font-weight: bold;
@@ -33,6 +32,7 @@
       .update-btn {
         height: 35px;
         width: 100px;
+        margin-top: 40px;
       }
     }
   }

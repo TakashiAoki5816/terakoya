@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
   def edit
-    @user = User.find(current_user.id)
   end
 
   def update
     if current_user.update(user_params)
+      flash[:notice] = "ユーザーが編集されました。"
       redirect_to root_path
     else
       render :edit
