@@ -21,6 +21,28 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
   end
 
+  def edit
+    @event = Event.find(params[:id])
+  end
+
+  def update
+    event = Event.find(params[:id])
+    if event.update(event_params)
+      redirect_to root_path, notice: '勉強会を編集しました'
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    event = Event.find(params[:id])
+    if event.destroy
+      redirect_to root_path, notice: '勉強会を削除しました'
+    else
+      render :edit
+    end
+  end
+
   private
   def event_params
     params.require(:event).permit(:name, :title, :datetime, :image, :content, :tag)

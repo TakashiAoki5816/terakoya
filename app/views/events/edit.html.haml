@@ -1,0 +1,25 @@
+.wrapper
+  .Eventbox
+    .Eventbox__Info
+      = form_with model: @event, locale: true do |f|
+        %h2.Eventbox-heading 勉強会を編集
+        .form-group.col-md-8
+          = f.label :name, '主催者'
+          = f.text_field :name, class: 'form-control'
+        .form-group.col-md-8
+          = f.label :title, 'タイトル'
+          = f.text_field :title, class: 'form-control', placeholder: '例： Rails勉強会'
+        .form-group.col-md-8
+          = f.label :datetime, '日時'
+          = f.datetime_local_field :datetime, class: 'form-control'
+        .form-group.col-md-6
+          = f.label :image, "イベント画像"
+          = f.file_field :image, class: 'form-control'
+        .form-group.col-md-8
+          = f.label :content, "勉強会の内容"
+          = f.text_area :content, class: 'form-control'
+        .form-group.col-md-6
+          = f.label :tag, "言語"
+          = f.text_field :tag, size: 10*20 ,class: 'form-control'
+        .form-group.col-md-6
+          = f.submit '編集完了', class: 'btn btn-primary'

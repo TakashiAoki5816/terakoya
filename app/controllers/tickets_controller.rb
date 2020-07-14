@@ -3,7 +3,7 @@ class TicketsController < ApplicationController
   end
 
   def create
-    ticket = current_user.tickets.buil do |t|
+    ticket = current_user.tickets.build do |t|
       t.event_id = params[:event_id]
     end
   end
