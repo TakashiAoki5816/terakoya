@@ -2,7 +2,7 @@
   .Eventbox
     .Eventbox__Info
       = form_with model: @event, locale: true do |f|
-        %h2.Eventbox-heading 勉強会を作成
+        %h2.Eventbox-heading 勉強会を編集
         .form-group.col-md-8
           = f.label :name, '主催者'
           = f.text_field :name, class: 'form-control'
@@ -21,9 +21,5 @@
         .form-group.col-md-6
           = f.label :tag, "言語"
           = f.text_field :tag, size: 10*20 ,class: 'form-control'
-        .form-check
-          = f.label "参加者", class: "form-check-label"
-          = f.collection_check_boxes :user_ids, User.all, :id, :name, class: "form-check-input"
         .form-group.col-md-6
-          = f.submit '勉強会を作成', class: 'btn btn-primary'
-
+          = f.submit '編集完了', class: 'btn btn-primary'

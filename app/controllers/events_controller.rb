@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+before_action :set_event, only: [:show, :edit]
   def index
     @events = Event.all.order(datetime: "ASC")
   end
@@ -17,9 +18,36 @@ class EventsController < ApplicationController
     end
   end
 
-  private
-  def event_params
-    params.require(:event).permit(:name, :title, :datetime, :image, :content, :tag)
+  def show
   end
 
+  def edit
+  end
+
+  def update
+    event = Event.find(params[:id])
+    if event.update(event_params)
+      redirect_to root_path, notice: '勉強会を編集しました'
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    event = Event.find(params[:id])
+    if event.destroy
+      redirect_to root_path, notice: '勉強会を削除しました'
+    else
+      render :edit
+    end
+  end
+
+  private
+  def event_params
+    params.require(:event).permit(:name, :title, :datetime, :image, :content, :tag, user_ids: [])
+  end
+
+  def set_event
+    @event = Event.find(params[:id])
+  end
 end

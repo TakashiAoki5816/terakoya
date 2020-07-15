@@ -29,8 +29,13 @@
               .event-content
                 .event-content__image
                   - if event.image?
-                    = image_tag event.image.url
+                    = image_tag event.image.url, :size =>'240x130'
                 .event-content__title
-                  = event.title
+                  = link_to event.title, event_path(event.id)
               .event-member
-                参加者：BEN
+                .event-member__header
+                  参加者：
+                .event-member__list
+                  - event.users.each do |e|
+                    = e.name
+

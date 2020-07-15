@@ -1,13 +1,15 @@
 .AccountPage {
-  width: 100vw;
+  width: 80vw;
   height: calc(100vh - 60px);
   .AccountBox {
-    width: 80%;
-    height: 100%;
+    width: 100%;
+    height: 70%;
     margin: 30px 100px;
     text-align: center;
+    background-color: white;
     &__title {
       font-weight: bold;
+      margin-bottom: 50px;
     }
     .AccountContent {
       width: 100%;
@@ -35,5 +37,11 @@
         margin-top: 40px;
       }
     }
+  }
+}
+
+.container {
+  .row {
+    margin-top: 70px;
   }
 }
