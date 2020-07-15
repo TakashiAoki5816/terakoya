@@ -44,9 +44,9 @@ body {
     }
     .Eventlist {
       width: 90%;
-      height: 250px;
-      border: 1px solid gray;
-      background-color: rgb(105, 170, 138);
+      height: 220px;
+      border: 1px solid white;
+      background-color: rgb(51, 87, 69);
       margin: 20px 0px 0px 10px;
       display: flex;
       align-items: center;
@@ -214,7 +214,7 @@ body {
     }
   }
   &__contentbox {
-    height: 40%;
+    height: 30%;
     margin: 20px;
     border: 1px solid gray;
     .content-Info {
@@ -223,6 +223,20 @@ body {
     .content {
       padding: 20px;
       font-size: 25px;
+    }
+  }
+  &__memberlist {
+    height: 100px;
+    width: 60%;
+    margin: 20px;
+    border: 1px solid gray;
+    .title {
+      font-weight: bold;
+    }
+    .member {
+      font-size: 18px;
+      padding: 8px;
+
     }
   }
 }
