@@ -2,28 +2,41 @@
   box-sizing: border-box;
 }
 
+body {
+  height: 100vh;
+  background: url(https://cdn.pixabay.com/photo/2017/06/30/22/12/landscape-2459981_960_720.jpg) no-repeat center center fixed #C0C0C0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .Main-Contents {
   width: 100vw;
   height: 300vh;
-  background-color: #EEEEEE;
+  background: url(https://cdn.pixabay.com/photo/2017/06/30/22/12/landscape-2459981_960_720.jpg) no-repeat center center fixed #C0C0C0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   .Contents-box {
     height: 100%;
     width: 90%;
-    background-color: white;
     margin: 0px 100px 0px;
     padding-top: 8px;
     .Contents-header {
-      height: 50px;
-      width: 800px;
+      height: 40px;
+      width: 70%;
       margin-left: 10px;
-      background-color: gray;
+      border: 1px solid gray;
+      background-color: rgb(185, 240, 190);
     } .EventInfo {
-      color: #EEEEEE;
+      color: black;
       padding: 8px 0px 0px 3px;
       &__date {
-        background-color: #BBBBBB;
-        height: 10px;
-        margin-top: 20px;
+        background-color: rgb(72, 129, 85);
+        height: 5px;
+        margin-top: 2px;
         padding: 2px;
         font-weight: bold;
         color: white;
@@ -31,8 +44,9 @@
     }
     .Eventlist {
       width: 90%;
-      height: 280px;
+      height: 250px;
       border: 1px solid gray;
+      background-color: rgb(105, 170, 138);
       margin: 20px 0px 0px 10px;
       display: flex;
       align-items: center;
@@ -44,6 +58,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        background-color:  rgb(185, 240, 190);
         .datetime {
           font-weight: bold;
           &__date {
@@ -59,6 +74,7 @@
         border: 1px solid gray;
         height: 200px;
         width: 80%;
+        background-color: white;
         .event-owner {
           height: 30px;
           padding: 5px;
@@ -88,6 +104,7 @@
             border: 1px solid gray;
             font-size: 30px;
             font-weight: bold;
+            background-color: rgb(236, 240, 238);
             a {
               color: black;
               text-decoration: none;
@@ -96,14 +113,27 @@
         }
         .event-member {
           margin-top: 3px;
+          display: flex;
+          align-items: center;
+          &__header {
+          }
+          &__list {
+          }
         }
       }
     }
   }
 }
-.wrapper {
-  height: 1000px;
+.Event-Box {
   background-color: #eeeeee;
+  width: 100vw;
+  height: 105vh;
+  background-color: #EEEEEE;
+  background: url(https://cdn.pixabay.com/photo/2017/06/30/22/12/landscape-2459981_960_720.jpg) no-repeat center center fixed #C0C0C0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   .Eventbox {
     background-color: #FFFFEE;
     width: 80%;
@@ -122,6 +152,12 @@
       }
       #event_content {
         height: 150px;
+      }
+      .form-check {
+        margin-bottom: 40px;
+        label {
+          padding-right: 20px;
+        }
       }
     }
   }
