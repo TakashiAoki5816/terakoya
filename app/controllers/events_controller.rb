@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
 before_action :set_event, only: [:show, :edit]
   def index
-    @events = Event.all.order(datetime: "ASC")
+    @events = Event.all.order(datetime: "ASC").page(params[:page]).per(8)
   end
 
   def new
