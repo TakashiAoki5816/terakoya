@@ -14,12 +14,16 @@
         = link_to "Terakoya", root_path
       - if user_signed_in?
         .Header__nav
-          .Header__nav-list
+          .searchform
+            = form_with(url: search_events_path, local: true, method: :get) do |f|
+              = f.text_field :keyword, placeholder: "勉強会を検索する", class: "search-input"
+              = f.submit "検索", class: "search-btn"
+          .nav-list
             = link_to "勉強会作成", new_event_path
-          .Header__nav-list
+          .nav-list
             %a{ href: '#' }
               参加一覧
-          .Header__nav-list
+          .nav-list
             = link_to current_user.name, edit_user_path(current_user)
     = render 'layouts/notifications'
     = yield

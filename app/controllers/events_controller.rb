@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
 before_action :set_event, only: [:show, :edit]
+
   def index
     @events = Event.all.order(datetime: "ASC").page(params[:page]).per(8)
   end
@@ -19,6 +20,10 @@ before_action :set_event, only: [:show, :edit]
   end
 
   def show
+  end
+
+  def search
+    @events = Event.search(params[:keyword])
   end
 
   def edit

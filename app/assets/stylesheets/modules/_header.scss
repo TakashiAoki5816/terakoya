@@ -18,13 +18,17 @@
   &__nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-right: 20px;
-  } &__nav-list {
+    justify-content: space-around;
+    width: 70%;
+    .searchform {
+      padding-right: 100px;
+    }
+    .nav-list {
     padding: 20px;
-    a {
-      text-decoration: none;
-      color: #FFFFFF;
+      a {
+        text-decoration: none;
+        color: #FFFFFF;
+      }
     }
   }
 }
