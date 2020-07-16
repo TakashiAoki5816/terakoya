@@ -8,4 +8,4 @@
       .Eventlists
         - @events.each do |event|
           = render partial: "event", locals: { event: event }
-      =paginate @events
+      = paginate @events

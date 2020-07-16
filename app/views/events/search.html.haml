@@ -1,3 +1,6 @@
-= form_with(url: search_events_path, local: true, method: :get) do |f|
-              = f.text_field :keyword, placeholder: "勉強会を検索する", class: "search-input"
-              = f.submit "検索", class: "search-btn"
+.wrapper
+  .Main-Contents
+    .Contents-box
+      .Eventlists
+        - @events.each do |event|
+          = render partial: "event", locals: { event: event }
