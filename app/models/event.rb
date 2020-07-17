@@ -7,4 +7,9 @@ class Event < ApplicationRecord
   validates :datetime, presence: true
 
   mount_uploader :image, ImageUploader
+
+  def self.search(search)
+    return Event.all unless search
+    Event.where('title LIKE(?)', "%#{search}%")
+  end
 end

@@ -1,11 +1,13 @@
 class EventsController < ApplicationController
 before_action :set_event, only: [:show, :edit]
+
   def index
     @events = Event.all.order(datetime: "ASC").page(params[:page]).per(8)
   end
 
   def new
     @event = Event.new
+    @event.users << current_user
   end
 
   def create
@@ -19,6 +21,14 @@ before_action :set_event, only: [:show, :edit]
   end
 
   def show
+  end
+
+  def search
+    @events = Event.search(params[:keyword])
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def edit
@@ -44,7 +54,7 @@ before_action :set_event, only: [:show, :edit]
 
   private
   def event_params
-    params.require(:event).permit(:name, :title, :datetime, :image, :content, :tag, user_ids: [])
+    params.require(:event).permit(:name, :title, :datetime, :image, :content, :tag, user_ids: []).merge(user_id: current_user.id)
   end
 
   def set_event

@@ -1,0 +1,31 @@
+.Eventlist
+  .Eventlist__left
+    .datetime
+      .datetime__date
+        = event.datetime.strftime("%m月%d日")
+      .datetime__time
+        = event.datetime.strftime("%H:%M")
+  .Eventlist__right
+    .event-owner
+      .eventowner
+        .eventowner__title
+          主催者：
+        .eventowner__name
+          = event.name
+      .eventowner
+        .eventowner__created-title
+          公開日：
+        .eventowner__created-date
+          = event.created_at.strftime("%m月%d日")
+    .event-content
+      .event-content__image
+        - if event.image?
+          = image_tag event.image.url, :size =>'240x130'
+      .event-content__title
+        = link_to event.title, event_path(event.id)
+    .event-member
+      .event-member__header
+        参加者：
+      .event-member__list
+        - event.users.each do |e|
+          = e.name
