@@ -9,6 +9,7 @@
           = @event.datetime.strftime("%Y年%m月%d日")
         .Eventjoin-box__form
           = link_to "勉強会を申し込む", new_event_ticket_path(current_user)
+        - if user_signed_in? && current_user.id == @event.user_
         .Event-edit
           = link_to "編集", edit_event_path(@event.id), method: :get
         .Event-destroy
