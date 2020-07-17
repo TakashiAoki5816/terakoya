@@ -1,4 +1,11 @@
 $(function() {
+
+  let search_list = $(".Eventlists");
+
+  function appendEvent(event) {
+
+  }
+
   $(".search-input").on("keyup", function() {
     let input = $(".search-input").val();
     $.ajax ({
@@ -8,7 +15,15 @@ $(function() {
       dataType: 'json'
     })
     .done(function(events) {
-      console.log(events);
+      $(".Eventlists").empty();
+      if (events.length !== 0) {
+        events.forEach(function(event) {
+          appendEvent(event);
+        });
+      }
+      else {
+        appendErrMsgToHTML("一致する勉強会がありません");
+      }
     })
   });
 });
