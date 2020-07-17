@@ -25,6 +25,6 @@
             %a{ href: '#' }
               参加一覧
           .nav-list
-            = link_to current_user.name, edit_user_path(current_user)
+            = link_to current_user.name, edit_user_registration_path(current_user)
     = render 'layouts/notifications'
     = yield
