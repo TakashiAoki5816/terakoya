@@ -1,7 +1,6 @@
 class Event < ApplicationRecord
-  has_many :event_users, dependent: :destroy
-  has_many :users, through: :event_users, dependent: :destroy
-  has_many :tickets
+  belongs_to :user, optional: true
+  has_many :participations, foreign_key: "event_id", dependent: :destroy
 
   validates :title, presence: true
   validates :datetime, presence: true
