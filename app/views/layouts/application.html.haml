@@ -22,8 +22,7 @@
           .nav-list
             = link_to "勉強会作成", new_event_path
           .nav-list
-            %a{ href: '#' }
-              参加一覧
+            = link_to "参加一覧", user_path(current_user)
           .nav-list
             = link_to current_user.name, edit_user_registration_path(current_user)
       - elsif user_signed_in?
