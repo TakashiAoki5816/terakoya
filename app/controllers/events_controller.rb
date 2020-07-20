@@ -26,22 +26,6 @@ before_action :set_event, only: [:show, :edit]
 
   def search
     @events = Event.search(params[:keyword])
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> parent of ffd7b55... update
-    respond_to do |format|
-      format.html
-      format.json
-    end
-<<<<<<< HEAD
-=======
-    @participation = Participation.new
->>>>>>> Stashed changes
->>>>>>> Stashed changes
-=======
->>>>>>> parent of ffd7b55... update
   end
 
   def edit
