@@ -1,0 +1,6 @@
+.wrapper
+  .Main-Contents
+    .Contents-box
+      .Eventlists
+        - @user.event_users.each do |user|
+          = render partial: "event", locals: { user: user }
