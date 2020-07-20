@@ -32,4 +32,3 @@ yarn-debug.log*
 
 /public/uploads
 app/controllers/events_controller.rb
-terakoya/
