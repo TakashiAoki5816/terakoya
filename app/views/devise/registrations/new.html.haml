@@ -27,6 +27,4 @@
               = f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control"
             .form-group
               = f.submit "新規登録", class: 'btn btn-primary btn-block'
-            .form-group
-              = link_to "かんたんログイン", users_guest_sign_in_path, method: :post, class: 'btn btn-warning btn-block'
           = render "devise/shared/links"

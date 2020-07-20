@@ -66,7 +66,7 @@ gem 'mini_magick'
 gem 'pry-rails'
 
 gem 'kaminari'
-gem 'font-awesome-sass'
+gem 'font-awesome-sass', '~> 5.4.1'
 
 # 日本語化
 gem 'rails-i18n', '~> 6.0'

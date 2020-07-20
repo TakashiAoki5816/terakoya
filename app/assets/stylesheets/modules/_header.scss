@@ -6,6 +6,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
   &__title {
     padding-left: 50px;
     display: flex;
@@ -16,7 +19,8 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
-      font-size: 25px;
+      font-size: 35px;
+      font-family: 'Caveat', cursive;
     }
     .searchform {
       width: 50%;
@@ -49,7 +53,7 @@
         text-decoration: none;
         color: white;
         font-weight: bold;
-        font-size: 15px;
+        font-size: 18px;
       }
     }
   }

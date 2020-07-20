@@ -1,16 +1,22 @@
 .Event-Box
   .Eventbox
     .Eventbox__Info
-      = form_with model: @event, locale: true do |f|
+      = form_with model: @event, local: true do |f|
         %h2.Eventbox-heading 勉強会を作成
         .form-group.col-md-8
           = f.label :name, '主催者'
+          %span.badge.badge-danger
+            必須
           = f.text_field :name, class: 'form-control'
         .form-group.col-md-8
           = f.label :title, 'タイトル'
+          %span.badge.badge-danger
+            必須
           = f.text_field :title, class: 'form-control', placeholder: '例： Rails勉強会'
         .form-group.col-md-8
           = f.label :datetime, '日時'
+          %span.badge.badge-danger
+            必須
           = f.datetime_local_field :datetime, class: 'form-control'
         .form-group.col-md-6
           = f.label :image, "イベント画像"
@@ -19,11 +25,11 @@
           = f.label :content, "勉強会の内容"
           = f.text_area :content, class: 'form-control'
         .form-group.col-md-6
-          = f.label :tag, "言語"
+          = f.label :tag, "タグ"
           = f.text_field :tag, size: 10*20 ,class: 'form-control'
         .form-check
           = f.label "参加者", class: "form-check-label"
           = f.collection_check_boxes :user_ids, User.all, :id, :name, class: "form-check-input"
-        .form-group.col-md-6
+        .form-group
           = f.submit '勉強会を作成', class: 'btn btn-primary'
 

@@ -25,10 +25,6 @@ before_action :set_event, only: [:show, :edit]
 
   def search
     @events = Event.search(params[:keyword])
-    respond_to do |format|
-      format.html
-      format.json
-    end
   end
 
   def edit
