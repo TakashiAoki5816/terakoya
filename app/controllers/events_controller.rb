@@ -21,7 +21,6 @@ before_action :set_event, only: [:show, :edit]
   end
 
   def show
-<<<<<<< Updated upstream
   end
 
   def search
