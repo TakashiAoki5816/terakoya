@@ -20,10 +20,21 @@ before_action :set_event, only: [:show, :edit]
   end
 
   def show
+<<<<<<< Updated upstream
   end
 
   def search
     @events = Event.search(params[:keyword])
+<<<<<<< Updated upstream
+=======
+    respond_to do |format|
+      format.html
+      format.json
+    end
+=======
+    @participation = Participation.new
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
   end
 
   def edit

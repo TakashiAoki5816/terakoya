@@ -21,6 +21,12 @@
         .form-group.col-md-6
           = f.label :tag, "言語"
           = f.text_field :tag, size: 10*20 ,class: 'form-control'
+<<<<<<< Updated upstream
+=======
+        .form-check
+          = f.label "参加者", class: "form-check-label"
+          = f.collection_check_boxes :user_ids, User.all, :id, :name, class: "form-check-input
+>>>>>>> Stashed changes
         .form-group.col-md-6
           = f.submit '勉強会を作成', class: 'btn btn-primary'
 
