@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
   root to: 'events#index'
   resources :events do
-    resources :participations, only: [:new, :create]
+    resources :tickets, only: [:new, :create]
     collection do
       get 'search'
     end

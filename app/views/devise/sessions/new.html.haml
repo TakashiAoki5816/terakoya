@@ -23,6 +23,4 @@
                 = f.label :remember_me, class: "custom-control-label"
             .form-group
               = f.submit "ログイン", class: "btn btn-primary btn-block"
-            .form-group
-              = link_to "かんたんログイン", users_guest_sign_in_path, method: :post, class: 'btn btn-warning btn-block'
             = render "devise/shared/links"
