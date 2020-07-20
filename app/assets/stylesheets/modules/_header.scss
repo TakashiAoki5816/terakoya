@@ -6,6 +6,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
   &__title {
     padding-left: 50px;
     display: flex;
